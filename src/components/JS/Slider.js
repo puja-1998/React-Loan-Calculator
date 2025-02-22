@@ -135,7 +135,7 @@ export default function Slider(){
                 {/* Interest Rate */}
                 <div className='Interest-rate'>
                     <label htmlFor='interestRate'>Interest Rate</label>
-                    <p className='value-amt'>$ {data.interestRate}</p>
+                    <p className='value-amt'> {data.interestRate} %</p>
                     <input
                         type='range'
                         min={2}
@@ -145,8 +145,8 @@ export default function Slider(){
                         />
 
                         <div className="rangeValue">
-                            <p>% 2</p>
-                            <p>% 18</p>
+                            <p>2 %</p>
+                            <p>18 %</p>
                         </div>
 
                         {/* Tenure Years */}

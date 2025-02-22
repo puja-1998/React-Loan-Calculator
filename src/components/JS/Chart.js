@@ -17,8 +17,8 @@ export default function Chart({data}){
             {
             label: "Ratio of Principle and Interest",
             data: [homeValue, totalInterestGenerated],
-            backgroundColor: ["rgba(22, 255, 0, 0.4)", "rgba(208, 212, 202, 0.4)"],
-            borderColor: ["rgba(22, 255, 0, 1)", "rgba(208, 212, 202, 1)"],
+            backgroundColor: ["#ff8000", "rgb(9, 255, 0)"],
+            borderColor: ["rgb(173, 81, 20)", "green"],
             borderWidth: 2,
             },
         ],
