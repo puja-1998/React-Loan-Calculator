@@ -1,5 +1,7 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Slider from './components/JS/Slider';
+
 
 function App() {
   return (
@@ -7,6 +9,8 @@ function App() {
       <header className="App-header">
         <p>Bank of React</p>
       </header>
+
+      <Slider/>
     </div>
   );
 }
