@@ -1,5 +1,8 @@
 
 import {useState} from 'react';
+import '../CSS/Slider.css';
+import Chart from './Chart'
+
 export default function Slider(){
 
     // Starting Homepage variable declaration
@@ -55,9 +58,9 @@ export default function Slider(){
     //set monthly payment
     function setPayment(){
         let newData = {...data}
-        let interestPerMonth = (newData.rate/100)/12;
-        let loanAmount = newData.loanAmount;
-        let totalLoanMonths = (newData.years * 12);
+        let interestPerMonth = (newData.interestRate/100)/12;
+        let loanAmount = newData.loanAmt;
+        let totalLoanMonths = (newData.yearsTenure * 12);
         let monthlyPay = (loanAmount * interestPerMonth *(1 + interestPerMonth) ** totalLoanMonths) / ((1 + interestPerMonth) ** totalLoanMonths - 1);
         setMonthlyPayment((monthlyPay).toFixed(2));
     }
@@ -156,9 +159,16 @@ export default function Slider(){
                             <option value={20}>20 years</option>
                             <option value={25}>25 years</option>
                         </select>
-                </div>
+                    </div>
                 </div>
                 
+            </div>
+
+            {/* Chart Component */}
+
+            <div className="pieChart">
+                <h1>Monthly Payment : {monthlyPayment} </h1>
+                <Chart data={data}/>
             </div>
         </div>
 
